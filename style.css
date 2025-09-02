@@ -1,0 +1,75 @@
+/* Page wrapper */
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game board container */
+.container {
+    margin: 50px 0px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    height: fit-content;
+}
+
+/* Each box (cell) on the board */
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for better UX */
+.box:hover {
+    background-color: #f0f0f0;
+}
+
+/* Remove borders to make the grid look cleaner */
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3) {
+    border-top: none;
+}
+.box:nth-child(3n + 1) {
+    border-left: none;
+}
+.box:nth-child(3n + 3) {
+    border-right: none;
+}
+.box:last-child,
+.box:nth-child(7),
+.box:nth-child(8) {
+    border-bottom: none;
+}
+
+/* Game result text styling */
+.gameResult-style {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Restart button styling */
+.restart-style {
+    visibility: hidden;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.show {
+    visibility: visible;
+}
